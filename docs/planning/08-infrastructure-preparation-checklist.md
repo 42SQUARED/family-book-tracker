@@ -6,15 +6,15 @@ This checklist is the practical sequence for preparing the real infrastructure n
 
 ## Order Of Execution
 
-1. Create the GitHub repository
-2. Create the Vercel account/projects
-3. Create the Neon database
-4. Create the Google Cloud project
-5. Enable Google Books API
-6. Create Google OAuth clients
-7. Fill in `infra/env/setup-record.md`
-8. Fill in `infra/env/variable-inventory.md` only if new variables are introduced
-9. Confirm all secrets exist in local and hosted environments
+1. [x] Create the GitHub repository
+2. [ ] Create the Vercel account/projects
+3. [ ] Create the Neon database
+4. [ ] Create the Google Cloud project
+5. [ ] Enable Google Books API
+6. [ ] Create Google OAuth clients
+7. [ ] Fill in `infra/env/setup-record.md`
+8. [ ] Fill in `infra/env/variable-inventory.md` only if new variables are introduced
+9. [ ] Confirm all secrets exist in local and hosted environments
 
 ## Step 1: GitHub
 
@@ -34,10 +34,11 @@ Record into setup record:
 Do:
 
 - create or use a Vercel account
-- import the repository
-- create one project for `apps/web`
-- create one project for `apps/api`
-- use Hobby tier first
+- create a new project and import the GitHub repository when prompted, setting root directory to `apps/web`
+- create a second new project and import the same GitHub repository again, setting root directory to `apps/api`
+- use Hobby tier for both initially
+
+Note: Vercel creates one project per import. To deploy a monorepo as two separate projects, you connect the same repository twice, once per project, and use the root directory setting to point each project at its subdirectory.
 
 Record into setup record:
 
